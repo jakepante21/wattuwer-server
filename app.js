@@ -6,11 +6,14 @@ const passport = require("passport");
 
 // initialize server
 const app = express();
-const port  = 3001;
+const port = process.env.PORT || 3001;
 
-mongoose.connect("mongodb://localhost/wattuwer",() => {
+// mongoose.connect("mongodb://localhost/wattuwer",() => {
+// 	console.log("connected to db");
+// })
+mongoose.connect("mongodb+srv://admin:12341234@capstone3-6ttmj.mongodb.net/wattuwer?retryWrites=true&w=majority",() =>{
 	console.log("connected to db");
-})
+});
 
 // middlewares
 app.use(passport.initialize());
