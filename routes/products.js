@@ -12,9 +12,9 @@ const cloudinary = require('cloudinary').v2;
 require('dotenv/config');
 
 cloudinary.config({
-  cloud_name: process.env.CLOUD_NAME,
-  api_key: process.env.API_KEY,
-  api_secret: process.env.API_SECRET
+  cloud_name: process.env.CLOUD_NAME || project-wattuwer-bookacar,
+  api_key: process.env.API_KEY || 874482535419333,
+  api_secret: process.env.API_SECRET || UMXQbOlpBPKIPq3GBaiNYmZ5AC4
 });
 
 // image storage
